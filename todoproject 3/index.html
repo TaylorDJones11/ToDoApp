@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule Helper</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="bg-dark mb-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <nav class="navbar justify-content-between">
+              <a class="navbar-brand">Schedule Helper</a>
+              <form class="form-inline">
+                <input
+                  class="form-control mr-sm-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                  id="searchtextbox"
+                />
+              </form>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="todo-outer">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-sm-12 col-md-8">
+            <h1 style="text-align: center">Let's Schedule Your Day</h1>
+            <div class="todo-inner">
+              <div class="form-row">
+                <div class="col-12 mr-sm-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter your task"
+                    id="addtaskinput"
+                  />
+                  <input type="hidden" id="saveindex" />
+                  <div class="form-group">
+                    <label for="usr">Due Date:</label>
+                    <input
+                      type="date"
+                      id="due-date"
+                      class="form-control"
+                      placeholder="Due date"
+                    />
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="btn btn-success mr-sm-2 mt-4"
+                  id="addtaskbtn"
+                >
+                  Add Task
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-success mr-sm-2 mt-4"
+                  id="savetaskbtn"
+                  style="display: none"
+                >
+                  Save Task
+                </button>
+                <button
+                  type="button"
+                  id="deleteallbtn"
+                  class="btn btn-danger mt-4 ml-2"
+                >
+                  Delete All
+                </button>
+                <button
+                  type="button"
+                  id="sortbtn"
+                  class="btn btn-success ml-2 mt-4"
+                >
+                  Sort by name
+                </button>
+              </div>
+              <div class="to-do-output">
+                <table
+                  class="table table-striped mt-3 mb-0"
+                  id="addedtasklist"
+                ></table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/main.js"></script>
+  </body>
+</html>
